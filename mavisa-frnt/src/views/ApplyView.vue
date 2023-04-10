@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h1>fill your info down below</h1>
+      <h1 class="font-xl">fill your info down below</h1>
     </div>
     <DossierForm />
   </template>
@@ -13,7 +13,13 @@
     name: 'ApplyView',
     components: {
         DossierForm,
+    },
+    mounted() {
+    if(localStorage.getItem("user")){
+        window.location.href = "/profil"
     }
+    
+  },
   }
   </script>
   
